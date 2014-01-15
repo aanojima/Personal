@@ -1,0 +1,138 @@
+body {
+	margin : 0px;
+	padding: 0px;
+	min-width: 760px;
+	font-family: 'Lato', serif;
+	background: url("/images/marble-bg.jpg");
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 60px;
+	line-height: 1em;
+	font-weight : 100;
+}
+
+#home {
+	height : 800px;
+	background: url("/images/gray-rep.jpg");
+	color : white;
+}
+
+#header-top img {
+	height : 200px;
+}
+
+nav a {
+	text-decoration: none;
+	color : white;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul li {
+	display: inline-block;
+}
+
+nav li {
+	margin : 0px 20px;
+}
+
+nav {
+	background-color: black;
+	text-align: center;
+	width : 100%;
+	height : 60px;
+	padding-top: 15px;
+	z-index: 10;
+}
+
+#navigation-container {
+	background-color: black;
+	z-index : 10;
+}
+
+.fixed {
+	position: fixed;
+	z-index : 10;
+}
+
+.scroll-fix {
+	margin-top : 60px;
+	padding-bottom: 60px;
+}
+
+.profile-bio {
+	display: inline-block;
+	float : left;
+	width : 50%;
+}
+
+#profile {
+	/*margin-top: -140px;*/
+	height : 560px;
+	width : auto;
+	z-index : -1;
+}
+
+#bio {
+	padding : 10px;
+	height : 600px;
+	text-align: left;
+}
+
+.about-me-icons-div img {
+	width : 25%;
+}
+
+.main_content {
+	padding-top : 60px;
+	min-height : 600px;
+	padding-bottom: 60px
+
+}
+
+.center-text {
+	text-align: center;
+}
+
+.center-div {
+	width : 1000px;
+	margin : auto;
+}
+
+#header-top {
+	padding-top: 100px;
+	font-size: 36;
+}
+
+#social_network li {
+	margin : 10px;
+}
+
+.work-icon {
+	width : 25%;
+	margin : 50px;
+}
+
+.edu-icon {
+	width : 30%;
+	margin : 50px;
+}
+
+#scratch-img {
+	width : 300px;
+}
+
+.proj-div {
+	display: inline-block;
+	float : left;
+	height : 300px;
+	width : 500px;
+}
+
+.proj-div a {
+	text-decoration: none;
+}

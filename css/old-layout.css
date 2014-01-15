@@ -1,0 +1,125 @@
+body {
+	margin : 0px;
+	padding: 0px;
+	min-width: 880px;
+}
+
+.fixed {
+    position:fixed;
+}
+
+.navlink:hover{
+	cursor:pointer;
+}
+
+#logo {
+	position : relative;
+	display : inline-block;
+	float : left;
+	text-decoration: underline;
+}
+
+a {
+	text-decoration: none;
+}
+
+#navigation {
+	display : inline-block;
+    box-shadow: 0 1px 14px 0 rgba(0,0,0, 0.4);
+    width: 100%;
+    min-width: 650px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: black;
+    font-weight: 400;
+    font-size: 15px;
+    height:30px;
+    padding:15px 0;
+    position:relative;
+    z-index: 10;
+}
+
+#navigation ul {
+	list-style-type: none;
+}
+
+#navigation ul li {
+	float : left;
+	padding-left : 30px;
+}
+
+#main {
+	padding-left : 360px;
+	padding-right : 0px;
+}
+
+#left_sidebar {
+	width : 360px;
+	right : 360px;
+	margin-left : -100%;
+	position : relative;
+	display : inline-block;
+	float : left;
+}
+
+#tagline {
+	text-align: center;
+	width : 100%;
+	font-size: 26;
+}
+
+#portrait img {
+	width : 100%;
+}
+
+#content {
+	display : inline-block;
+	float : left;
+	position : relative;
+	width : 100%;
+}
+
+#index {
+	display : block;
+}
+
+.main_content {
+	display : none;
+	width : 100%;
+	min-height : 600px;
+}
+
+.info {
+	padding-left: 40px;
+}
+
+#social_network li {
+	float : left;
+	padding : 10px;
+}
+
+.about-me-icon {
+	max-width : 256px;
+	max-height : 256px;
+	width : 20%;
+	margin : 10px;
+	position : relative;
+	top : 100px;
+}
+
+.work-icon {
+	max-width : 180px;
+	max-height : 180px;
+	width : 30%;
+	margin : 10px;
+	position : relative;
+	top : 100px;
+}
+
+.edu-icon {
+	max-width : 256px;
+	max-height : 256px;
+	width : 50%;
+	margin : 10px;
+	position : relative;
+	top : 100px;
+}

@@ -18,5 +18,9 @@ $(document).ready(function() {
 
 	$("a").click(function(){
 		$('nav').addClass('fixed').css('top','0').next().css('padding-top','60px');
+		$('html, body').animate({
+			scrollTop: $( $.attr(this, 'href') ).offset().top
+		}, 500);
+		return false;
 	});
 });

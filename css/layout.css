@@ -1,7 +1,6 @@
 body {
 	margin : 0px;
 	padding: 0px;
-	min-width: 760px;
 	font-family: 'Lato', serif;
 	background: url("/images/marble-bg.jpg");
 }
@@ -15,6 +14,7 @@ h1 {
 
 #home {
 	height : 800px;
+	/*min-width : 760px;*/
 	background: url("/images/gray-rep.jpg");
 	color : white;
 }
@@ -59,11 +59,6 @@ nav {
 	z-index : 10;
 }
 
-.scroll-fix {
-	margin-top : 60px;
-	padding-bottom: 60px;
-}
-
 .profile-bio {
 	display: inline-block;
 	float : left;
@@ -71,7 +66,6 @@ nav {
 }
 
 #profile {
-	/*margin-top: -140px;*/
 	height : 560px;
 	width : auto;
 	z-index : -1;
@@ -89,9 +83,8 @@ nav {
 
 .main_content {
 	padding-top : 60px;
-	min-height : 600px;
-	padding-bottom: 60px
-
+	min-height : 100%;
+	min-width : 100%;
 }
 
 .center-text {
@@ -100,6 +93,7 @@ nav {
 
 .center-div {
 	width : 1000px;
+	min-height: 560px;
 	margin : auto;
 }
 
@@ -120,6 +114,18 @@ nav {
 .edu-icon {
 	width : 30%;
 	margin : 50px;
+}
+
+#hidden {
+	position : fixed;
+	background-color: black;
+	top : 50%;
+	left : 50%;
+	margin-top : -200px;
+	margin-left : -400px;
+	width : 800px;
+	height : 400px;
+	display : none;
 }
 
 #scratch-img {

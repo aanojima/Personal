@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	
+
+	// $("#scroll_item").hide();
 	var idleState = false;
 	var idleWait = 2000;
 	var idleTimer = null;
@@ -16,17 +17,17 @@ $(document).ready(function(){
 		$(this).effect('bounce');
 	}, function(){});
 
-	$('*').bind('mousemove keydown scroll', function () {
+	$('*').bind('load mousemove keydown scroll', function () {
 		clearTimeout(idleTimer);
-		if (idleState == true && $(window).scrollTop() < 800) {
-			// Reactivated event
-			$("#scroll_item").fadeOut(400);
-		}
 		idleState = false;
+		if (idleState == false && $(window).scrollTop() < 800) {
+			// Reactivated event
+			$("#scroll_item").hide("fade", 400);
+		}
 		idleTimer = setTimeout(function () {
 			// Idle Event
 			idleState = true;
-			$("#scroll_item").fadeIn(400);
+			$("#scroll_item").show("fade", 400);
 		}, idleWait);
 	});
 

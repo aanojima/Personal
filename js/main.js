@@ -19,15 +19,17 @@ $(document).ready(function(){
 
 	$('*').bind('load mousemove keydown scroll', function () {
 		clearTimeout(idleTimer);
-		idleState = false;
-		if (idleState == false && $(window).scrollTop() < 800) {
+		if (idleState) {
 			// Reactivated event
 			$("#scroll_item").hide("fade", 400);
 		}
+		idleState = false;
 		idleTimer = setTimeout(function () {
 			// Idle Event
 			idleState = true;
-			$("#scroll_item").show("fade", 400);
+			if ($(window).scrollTop() < 800){
+				$("#scroll_item").show("fade", 400);	
+			}
 		}, idleWait);
 	});
 

@@ -12,22 +12,6 @@ h1 {
 	font-weight : 100;
 }
 
-#home {
-	height : 800px;
-	/*min-width : 760px;*/
-	background: url("/images/gray-rep.jpg");
-	color : white;
-}
-
-#header-top img {
-	height : 200px;
-}
-
-nav a {
-	text-decoration: none;
-	color : white;
-}
-
 ul {
 	list-style-type: none;
 }
@@ -36,27 +20,74 @@ ul li {
 	display: inline-block;
 }
 
-nav li {
-	margin : 0px 20px;
+#home {
+	height : 800px;
+	/*min-width : 760px;*/
+	background: url("/images/gray-rep.jpg");
+	color : white;
 }
 
-nav {
-	background-color: black;
-	text-align: center;
-	width : 100%;
-	height : 60px;
-	padding-top: 15px;
-	z-index: 10;
+.center-header {
+	text-align : center;
+}
+
+#header-top {
+	padding-top: 100px;
+	font-size: 36;
+}
+
+#social_network li {
+	margin : 10px;
+}
+
+#header-top img {
+	height : 200px;
 }
 
 #navigation-container {
+	height : 60px;
+	width : 100%;
 	background-color: black;
 	z-index : 10;
+	text-align : center;
+	top : 800px;
+}
+
+#navigation-container ul {
+	margin : 0px;
+	height : 30px;
+}
+
+#navigation-container li {
+	margin : 15px 20px 0px 20px;
+	font-size: 20;
+}
+
+#navigation-container a {
+	text-decoration: none;
+	color : white;
 }
 
 .fixed {
 	position: fixed;
 	z-index : 10;
+}
+
+.main_content {
+	position : relative;
+	min-height : 100%;
+	min-width : 100%;
+}
+
+.center-div {
+	padding-top : 0px;
+	text-align: center;
+}
+
+.center-text {
+	width : 1000px;
+	min-height: 560px;
+	margin : auto;
 }
 
 .profile-bio {
@@ -77,35 +108,6 @@ nav {
 	text-align: left;
 }
 
-.about-me-icons-div img {
-	width : 25%;
-}
-
-.main_content {
-	padding-top : 60px;
-	min-height : 100%;
-	min-width : 100%;
-}
-
-.center-text {
-	text-align: center;
-}
-
-.center-div {
-	width : 1000px;
-	min-height: 560px;
-	margin : auto;
-}
-
-#header-top {
-	padding-top: 100px;
-	font-size: 36;
-}
-
-#social_network li {
-	margin : 10px;
-}
-
 .work-icon {
 	width : 25%;
 	margin : 50px;
@@ -114,6 +116,21 @@ nav {
 .edu-icon {
 	width : 30%;
 	margin : 50px;
+}
+
+.proj-div {
+	display: inline-block;
+	float : left;
+	height : 300px;
+	width : 500px;
+}
+
+.proj-div a {
+	text-decoration: none;
+}
+
+#scratch-img {
+	width : 300px;
 }
 
 #hidden {
@@ -126,19 +143,4 @@ nav {
 	width : 800px;
 	height : 400px;
 	display : none;
-}
-
-#scratch-img {
-	width : 300px;
-}
-
-.proj-div {
-	display: inline-block;
-	float : left;
-	height : 300px;
-	width : 500px;
-}
-
-.proj-div a {
-	text-decoration: none;
 }

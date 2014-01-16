@@ -10,7 +10,7 @@ $(document).ready(function() {
 			// add padding top to the #content (value is same as the height of the nav)
 			$('#navigation-container').addClass('fixed').css('top','0');
 			$('.center-div').css({'padding-top' : '60px'});
-			
+
 		} else {
 			
 			// when scroll up or less than aboveHeight, remove the "fixed" class, and the padding-top
@@ -26,4 +26,8 @@ $(document).ready(function() {
 		}, 500);
 		return false;
 	});
+
+	$("#nav-resume").click(function(){
+		window.location.href="resume.pdf";
+	})
 });

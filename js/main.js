@@ -32,7 +32,7 @@ $(document).ready(function(){
 	$("#nav-resume").click(function(){
 		window.location.href="resume.pdf";
 	})
-	$(".edu-icon").click(function(){
+	$(".edu-icon, .work-icon").click(function(){
 		window.location.href="#education";
 		$("#hidden").fadeIn(500,function(){
 			$(".main_content,#home,nav").one("click", function(){

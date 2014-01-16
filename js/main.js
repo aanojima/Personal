@@ -5,12 +5,41 @@ $(document).ready(function(){
 	var idleWait = 2000;
 	var idleTimer = null;
 
+	$("#hidden").dialog({
+		autoOpen : false,
+		resizable : false,
+		draggable : false,
+		modal : true,
+		position : {
+			my : "top",
+			at : "top",
+			of : window
+		},
+		dialogClass : "fixed_dialog",
+		minHeight : 500,
+		minWidth : 800,
+		open : function(){
+			$('body').on({
+				'mousewheel' : function(e){
+					if (e.target.id == 'el') return;
+					e.preventDefault();
+					e.stopPropagation();
+				},
+			})
+		},
+		close : function(){
+			$('body').off();
+		}
+	});
+
 	$(".edu-icon, .work-icon").click(function(){
-		$("#hidden").fadeIn(500,function(){
-			$(".main_content,#home,nav").one("click", function(){
-				$("#hidden").fadeOut(500);
-			});
-		});
+		// $("#hidden").fadeIn(500,function(){
+		// 	$("#info_back").one("click", function(){
+		// 		$("#hidden").fadeOut(500);
+		// 	});
+		// 	$()
+		// });
+		$("#hidden").dialog('open');
 	});
 
 	$("#social_network li a").hover(function(){

@@ -33,11 +33,11 @@ ul li {
 
 #header-top {
 	padding-top: 100px;
-	font-size: 36;
+	font-size: 32;
 }
 
 #social_network li {
-	margin : 10px;
+	margin : 0px 10px;
 }
 
 #header-top img {

@@ -27,6 +27,16 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$("#navigation-container a").hover(function(){
+		$(this).animate({
+			color : "red"
+		}, 100)
+	}, function(){
+		$(this).animate({
+			color : "white"
+		}, 100)
+	});
+
 	$("#nav-resume").click(function(){
 		window.location.href="resume.pdf";
 	})

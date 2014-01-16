@@ -8,7 +8,5 @@ $(document).ready(function(){
 	});
 	$("#social_network li a").hover(function(){
 		$(this).effect('bounce');
-	}, function(){
-		console.log("BYE");
-	});
+	}, function(){});
 });

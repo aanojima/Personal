@@ -21,7 +21,8 @@ ul li {
 }
 
 #home {
-	height : 800px;
+	height : 100%;
+	min-height : 800px;
 	/*min-width : 760px;*/
 	background: url("/images/gray-rep.jpg");
 	color : white;
@@ -81,6 +82,13 @@ ul li {
 	position : relative;
 	min-height : 100%;
 	min-width : 100%;
+	padding-top : 60px;
+}
+
+#content {
+	position : relative;
+	top : -60px;
+	z-index: -1;
 }
 
 .center-div {

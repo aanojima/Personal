@@ -7,9 +7,6 @@ $(document).ready(function() {
 		DOWN : 40,
 	}
 
-	var scrollTop;
-	var fullHeight;
-
 	// when scroll
 	$(window).scroll(function(){
 
@@ -29,7 +26,6 @@ $(document).ready(function() {
 
 		}
 
-		scrollTop = $(window).scrollTop();
 	});
 
 	function goToContent(ID){
@@ -77,17 +73,17 @@ $(document).ready(function() {
 		}
 	});
 
-	$('body').bind('mousewheel', function(e){
-		e.preventDefault();
-		if(e.originalEvent.wheelDelta /120 > 0) {
-			// Scrolling Up
+	// $('body').on('mousewheel', function(e){
+	// 	// e.preventDefault();
+	// 	if(e.originalEvent.wheelDelta /120 > 0) {
+	// 		// Scrolling Up
 			
-		}
-		else{
-			// Scrolling Down
+	// 	}
+	// 	else{
+	// 		// Scrolling Down
 			
-		}
-	});
+	// 	}
+	// });
 
 	$("#navigation-container a").hover(function(){
 		$(this).animate({

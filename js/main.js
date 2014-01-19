@@ -18,16 +18,20 @@ $(document).ready(function(){
 		minHeight : 500,
 		minWidth : 800,
 		open : function(){
+			console.log("NEW");
 			$('body').on({
-				'mousewheel' : function(e){
+				mousewheel : function(e){
 					if (e.target.id == 'el') return;
 					e.preventDefault();
 					e.stopPropagation();
 				},
+			});
+			$('#home, #navigation_container, #content').one(function(e){
+				console.log("SHOULD CLOSE");
 			})
 		},
-		close : function(){
-			$('body').off();
+		close : function(e){
+			$('body').unbind('mousewheel');
 		}
 	});
 
@@ -39,9 +43,13 @@ $(document).ready(function(){
 		$(this).effect('bounce');
 	}, function(){});
 
+	// $("body").bind("mousewheel",function(ev, delta) {
+	// 	var scrollTop = $(window).scrollTop();
+	// 	$(window).scrollTop(scrollTop - Math.round(delta*20));
+	// });
 
 	// Idle Scroll
-	$('*').bind('load mousemove keydown scroll', function () {
+	$('*').on('load mousemove keydown scroll', function () {
 		clearTimeout(idleTimer);
 		if (idleState) {
 			// Reactivated event

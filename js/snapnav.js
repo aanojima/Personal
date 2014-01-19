@@ -44,27 +44,50 @@ $(document).ready(function() {
 		return goToContent(ID);
 	});
 
-	$("*").keydown(function(e){
+	function goPrevious(){
 		var sectionIndex = 1 + Math.floor( ($(window).scrollTop() - $("#home").height() ) / ($(".main_content").height() + 60));
 		sectionIndex < 1 ? sectionIndex = 0 : null;
 		var divs = $("#home, .main_content").toArray();
+		var prevIndex = sectionIndex - 1;
+		var prevDiv;
+		if (prevIndex >= 0){
+			prevDiv = divs[prevIndex];
+		} else { return false }
+		return goToContent("#" + prevDiv.id);
+	}
+
+	function goNext(){
+		var sectionIndex = 1 + Math.floor( ($(window).scrollTop() - $("#home").height() ) / ($(".main_content").height() + 60));
+		sectionIndex < 1 ? sectionIndex = 0 : null;
+		var divs = $("#home, .main_content").toArray();
+		var nextIndex = sectionIndex + 1;
+		var nextDiv;
+		if (nextIndex < divs.length){
+			nextDiv = divs[nextIndex];
+		} else { return false }
+		return goToContent("#" + nextDiv.id);
+	}
+
+	$("*").keydown(function(e){
 		var key = (e.keyCode ? e.keyCode : e.which);
 		if (key == Keys.UP || key == Keys.RIGHT) {
-			var prevIndex = sectionIndex - 1;
-			var prevDiv;
-			if (prevIndex >= 0){
-				prevDiv = divs[prevIndex];
-			} else { return false }
-			return goToContent("#" + prevDiv.id);
+			return goPrevious();
 		} else if (key == Keys.DOWN || key == Keys.LEFT) {
-			var nextIndex = sectionIndex + 1;
-			var nextDiv;
-			if (nextIndex < divs.length){
-				nextDiv = divs[nextIndex];
-			} else { return false }
-			return goToContent("#" + nextDiv.id);
+			return goNext();
 		}
-	})
+	});
+
+	$('body').bind('mousewheel', function(e){
+		e.preventDefault();
+		if(e.originalEvent.wheelDelta /120 > 0) {
+			// Scrolling Up
+			
+		}
+		else{
+			// Scrolling Down
+			
+		}
+	});
 
 	$("#navigation-container a").hover(function(){
 		$(this).animate({

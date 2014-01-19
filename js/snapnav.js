@@ -1,33 +1,72 @@
 $(document).ready(function() {
-	// when scroll
+	
+	var Keys = {
+		LEFT : 37,
+		UP : 38,
+		RIGHT : 39,
+		DOWN : 40,
+	}
 
+	var scrollTop;
+	var fullHeight;
+
+	// when scroll
 	$(window).scroll(function(){
-		console.log("SCROLL");
+
 		//if scrolled down more than the header's height
 		if ($(window).scrollTop() >= $("#home").height()){
 			
 			// if yes, add "fixed" class to the <nav>
 			// add padding top to the #content (value is same as the height of the nav)
-			$('#navigation-container').addClass('fixed').css('top','0');
+			$('#navigation-container').css({'position' : 'fixed'});
 			$('#content').css({'padding-top' : '60px'});
 
 		} else {
 			
 			// when scroll up or less than aboveHeight, remove the "fixed" class, and the padding-top
-			$('#navigation-container').removeClass('fixed');
+			$('#navigation-container').css({'position' : 'relative'});
 			$('#content').css({'padding-top' : '0px'});
 
 		}
+
+		scrollTop = $(window).scrollTop();
 	});
 
-	$("a").click(function(){
+	function goToContent(ID){
 		$('html, body').animate({
-			scrollTop: $(window).scrollTop() >= $("#home").height() ? 
-				$( $.attr(this, 'href') ).offset().top : 
-				$( $.attr(this, 'href') ).offset().top,
+			scrollTop: $(ID).offset().top
 		}, 500);
 		return false;
+	}
+
+	$("a").click(function(){
+		var ID = $.attr( this, 'href' );
+		return goToContent(ID);
 	});
+
+	$("*").keydown(function(e){
+		var sectionIndex = 1 + Math.floor( ($(window).scrollTop() - $("#home").height() ) / ($(".main_content").height() + 60));
+		sectionIndex < 1 ? sectionIndex = 0 : null;
+		var divs = $("#home, .main_content").toArray();
+		var key = (e.keyCode ? e.keyCode : e.which);
+		if (key == Keys.UP) {
+			var prevIndex = sectionIndex - 1;
+			var prevDiv;
+			if (prevIndex >= 0){
+				prevDiv = divs[prevIndex];
+				console.log(divs);
+			} else { return false }
+			return goToContent("#" + prevDiv.id);
+		} else if (key == Keys.DOWN) {
+			var nextIndex = sectionIndex + 1;
+			var nextDiv;
+			if (nextIndex < divs.length){
+				nextDiv = divs[nextIndex];
+				console.log(divs);
+			} else { return false }
+			return goToContent("#" + nextDiv.id);
+		}
+	})
 
 	$("#navigation-container a").hover(function(){
 		$(this).animate({
@@ -42,4 +81,5 @@ $(document).ready(function() {
 	$("#nav-resume").click(function(){
 		window.location.href="resume.pdf";
 	})
+
 });

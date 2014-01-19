@@ -46,6 +46,8 @@ $(document).ready(function(){
 		$(this).effect('bounce');
 	}, function(){});
 
+
+	// Idle Scroll
 	$('*').bind('load mousemove keydown scroll', function () {
 		clearTimeout(idleTimer);
 		if (idleState) {

@@ -1,9 +1,9 @@
 $(document).ready(function() {
 	
 	var Keys = {
-		LEFT : 37,
+		RIGHT : 37,
 		UP : 38,
-		RIGHT : 39,
+		LEFT : 39,
 		DOWN : 40,
 	}
 
@@ -49,20 +49,18 @@ $(document).ready(function() {
 		sectionIndex < 1 ? sectionIndex = 0 : null;
 		var divs = $("#home, .main_content").toArray();
 		var key = (e.keyCode ? e.keyCode : e.which);
-		if (key == Keys.UP) {
+		if (key == Keys.UP || key == Keys.RIGHT) {
 			var prevIndex = sectionIndex - 1;
 			var prevDiv;
 			if (prevIndex >= 0){
 				prevDiv = divs[prevIndex];
-				console.log(divs);
 			} else { return false }
 			return goToContent("#" + prevDiv.id);
-		} else if (key == Keys.DOWN) {
+		} else if (key == Keys.DOWN || key == Keys.LEFT) {
 			var nextIndex = sectionIndex + 1;
 			var nextDiv;
 			if (nextIndex < divs.length){
 				nextDiv = divs[nextIndex];
-				console.log(divs);
 			} else { return false }
 			return goToContent("#" + nextDiv.id);
 		}

@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-	// $("#scroll_item").hide();
 	var idleState = false;
 	var idleWait = 2000;
 	var idleTimer = null;
@@ -33,12 +32,6 @@ $(document).ready(function(){
 	});
 
 	$(".edu-icon, .work-icon").click(function(){
-		// $("#hidden").fadeIn(500,function(){
-		// 	$("#info_back").one("click", function(){
-		// 		$("#hidden").fadeOut(500);
-		// 	});
-		// 	$()
-		// });
 		$("#hidden").dialog('open');
 	});
 

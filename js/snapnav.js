@@ -29,7 +29,7 @@ $(document).ready(function() {
 	});
 
 	function goToContent(ID){
-		$('html, body').animate({
+		$("html, body").animate({
 			scrollTop: $(ID).offset().top
 		}, 500);
 		return false;
@@ -54,6 +54,7 @@ $(document).ready(function() {
 
 	function goNext(){
 		var sectionIndex = 1 + Math.floor( ($(window).scrollTop() - $("#home").height() ) / ($(".main_content").height() + 60));
+		console.log(sectionIndex);
 		sectionIndex < 1 ? sectionIndex = 0 : null;
 		var divs = $("#home, .main_content").toArray();
 		var nextIndex = sectionIndex + 1;

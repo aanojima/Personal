@@ -2,7 +2,7 @@ body {
 	margin : 0px;
 	padding: 0px;
 	font-family: 'Lato', serif;
-	background: url("/images/marble-bg.jpg");
+	background: url("../images/marble-bg.jpg");
 }
 
 h1 {
@@ -23,8 +23,7 @@ ul li {
 #home {
 	height : 100%;
 	width : 100%;
-	/*min-height : 800px;*/
-	background: url("/images/gray-rep.jpg");
+	background: url("../images/gray-rep.jpg");
 	color : white;
 	padding-top : 0px;
 }
@@ -33,21 +32,40 @@ ul li {
 	text-align : center;
 }
 
+#home-container {
+	height : 100%;
+}
+
 #header-top {
-	padding-top: 100px;
+	position: relative;	
+	height: 70%;
 	font-size: 32;
 }
 
-#social_network li {
-	margin : 0px 10px;
+#header-top img {
+    max-width : 90%;
+    max-height : 50%;
+    height : auto;
+}
+
+#header-bottom {
+	height: 30%;
 }
 
 #scroll_item {
+    height : 90%;
 	display : none;
 }
 
 #header-top img {
-	height : 200px;
+	/*height : 200px;*/
+	margin-top: 5%;
+	height: 45%;
+	width: auto;
+}
+
+#header-top h2 {
+	height: 40%;
 }
 
 #navigation-container {
